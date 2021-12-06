@@ -69,8 +69,6 @@ jobs:
         $GITHUB_WORKSPACE/$DIY_P1_SH
     - name: Add openwrt
       run: cd openwrt && sed -i '$a src-git NueXini_Packages https://github.com/NueXini/NueXini_Packages.git' feeds.conf.default
-    - name: default theme
-      run: cd openwrt && sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' feeds/luci/collections/luci/Makefile
     - name: Add poweroff
       run: cd openwrt/package && git clone https://github.com/esirplayground/luci-app-poweroff.git
     - name: Add autopoweroff
